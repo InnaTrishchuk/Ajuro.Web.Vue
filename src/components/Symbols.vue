@@ -186,6 +186,12 @@ export default {
               clickEvent: () => this.tableCellSelected($event, params)
             },
             {
+              label: 'Market',
+              field: 'market',
+              sort: 'asc',
+              clickEvent: () => this.tableCellSelected($event, params)
+            },
+            {
               label: 'Updated',
               field: 'updated',
               sort: 'asc',
