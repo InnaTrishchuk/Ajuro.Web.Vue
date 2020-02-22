@@ -2,6 +2,7 @@
   <mdb-container>
     
       <p>
+        <router-link to="/Charts">Charts</router-link>
         <router-link to="/Symbols">Symbols</router-link>
         <router-link to="/Alerts">Alerts</router-link>
       </p>
