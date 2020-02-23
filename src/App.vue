@@ -88,9 +88,12 @@ import {
   mdbDatatable 
 } from "mdbvue";
 import Event from "@/components/Event";
+import { VueTags } from 'vue-tags-component';
+
 export default {
   name: "App",
   components: {
+    VueTags,
     mdbContainer,
     mdbRow,
     mdbCol,
@@ -181,7 +184,7 @@ export default {
     }
   },
   mounted: function () {
-   this.getItems("snippets");
+   // this.getItems("snippets");
   },
   methods: {
        rowDblclick(event){

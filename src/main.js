@@ -8,6 +8,8 @@ import Symbols from './components/Symbols';
 import Charts from './components/Charts';
 import Alerts from './components/Alerts';
 import App from './App';
+import { VueTags } from 'vue-tags-component';
+Vue.component('vue-tags', VueTags);
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
@@ -32,4 +34,5 @@ new Vue({
   components: { App },
   template: '<App/>',  
   router
-}).$mount('#app');
+});
+// .$mount('#app');
