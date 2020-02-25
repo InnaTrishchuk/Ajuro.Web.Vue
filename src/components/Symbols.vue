@@ -138,8 +138,8 @@ export default {
   },
   data() {
     return{
-      // host: "https://otb.expert/",
-      host: "https://localhost:5000/",
+      host: "https://otb.expert/",
+      // host: "https://localhost:5000/",
       noServer: false,
       type: "symbol",
       editingItem: {},

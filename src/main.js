@@ -7,12 +7,30 @@ import VueRouter from 'vue-router';
 import Symbols from './components/Symbols';
 import Charts from './components/Charts';
 import Alerts from './components/Alerts';
+import regeneratorRuntime from 'regenerator-runtime';
 import App from './App';
-import { VueTags } from 'vue-tags-component';
+
+/*
+import CoreAuth from './CoreAuth'
+import coreLogin from './components/login.vue'
+import coreMagicLink from './components/magicLink.vue'
+import coreReset from './components/reset.vue'
+import coreAvatar from './components/avatar.vue'
+import coreAccountItem from './components/account/accountItem.vue'
+import coreAccountChooser from './components/account/accountChooser.vue'
+
 Vue.component('vue-tags', VueTags);
+Vue.component('core-login', coreLogin)
+Vue.component('core-magic-link', coreMagicLink)
+Vue.component('core-reset', coreReset)
+Vue.component('core-avatar', coreAvatar)
+Vue.component('core-account-item', coreAccountItem)
+Vue.component('core-account-chooser', coreAccountChooser)
+*/
 
 Vue.use(VueRouter);
-Vue.config.productionTip = false;
+Vue.config.productionTip = false;  
+console.log(regeneratorRuntime);
 
 const routes = [
   { path: '', name: 'Charts', component: Charts },
@@ -29,7 +47,7 @@ const router = new VueRouter({
 });
 
 /* eslint-disable no-new */
-new Vue({
+new Vue({  
   el: '#app',
   components: { App },
   template: '<App/>',  

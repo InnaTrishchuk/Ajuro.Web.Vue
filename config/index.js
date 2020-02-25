@@ -6,6 +6,9 @@ const path = require('path')
 
 module.exports = {
   dev: {
+    devServer: {
+      https: true
+    },
 
     // Paths
     assetsSubDirectory: 'static',

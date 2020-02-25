@@ -9,6 +9,9 @@ function resolve (dir) {
 }
 
 module.exports = {
+  devServer: {
+    https: true
+  },
   entry: {
     app: './src/main.js'
   },

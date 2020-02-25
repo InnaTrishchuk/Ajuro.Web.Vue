@@ -5,6 +5,10 @@
         <router-link to="/Charts">Charts</router-link>
         <router-link to="/Symbols">Symbols</router-link>
         <router-link to="/Alerts">Alerts</router-link>
+        <v-facebook-login app-id="1806629292701133"></v-facebook-login>
+        <button v-if="facebook.scope.logout" @click="facebook.scope.logout">
+          Logout
+        </button>
       </p>
       
       <router-view></router-view>
@@ -89,10 +93,12 @@ import {
 } from "mdbvue";
 import Event from "@/components/Event";
 import { VueTags } from 'vue-tags-component';
+import VFacebookLogin from 'vue-facebook-login-component'
 
 export default {
   name: "App",
   components: {
+    VFacebookLogin,
     VueTags,
     mdbContainer,
     mdbRow,
@@ -111,7 +117,10 @@ export default {
   },
   data() {
     return{
-    
+      facebook: {
+        FB: {},
+        scope: {},
+      },
       noServer: true,
      editingItem: {},
       selectedIndex: -1,
@@ -187,6 +196,10 @@ export default {
    // this.getItems("snippets");
   },
   methods: {
+    handleSdkInit({ FB, scope }) {
+        this.facebook.scope = scope
+        this.facebook.FB = FB
+      },
        rowDblclick(event){
       var s =0;
     },
